@@ -1,0 +1,5 @@
+body { background-color:white; }
+header { background-color:antiquewhite; border-bottom-width:1px; width: 100%; }
+h1 { color:midnightblue; text-align:center; font-size: 40px; font-family:'Courier New', Courier, monospace;}
+div { width: 85%; }
+img:hover { width:110%; height:110%; }

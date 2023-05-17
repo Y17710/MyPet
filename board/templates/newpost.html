@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<!-- MyPet NewPost -->
+<!-- 새로운 포스트를 작성할 수 있는 페이지. POST방식으로 포스트 제목, 내용 전달하여 DB에 저장 -->
+<html>
+<head>
+    <title>Write new post</title>
+</head>
+<body>
+    <form id="newpost" action="{% url 'uploadpost' %}" method="POST"> {% csrf_token %}
+        <span>
+            Title:
+            <input form="newpost" name="postname" size="50" type="text" required>
+        </span>
+        <hr>
+        <div display="inline-block">
+            <textarea form="newpost" name="contents" cols="200" rows="3" maxlength="500" placeholder="Write your new post here" required>
+            </textarea>
+        </div>
+        <button type="submit" form="newpost">Post</button>
+    </form>
+</body>
+</html>

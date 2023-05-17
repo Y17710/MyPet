@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- MyPet Posting -->
+<!-- DB에 저장된 Post를 인자로 받아 보여주는 페이지 -->
+<html>
+<head>
+    <style>
+        body { background-color:white; }
+        #post { border: 2px solid dimgray; margin: 15 15 !important; padding: 5 5;}
+        #postname { margin: 5 5; font-weight:500; font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif; }
+        #contents { margin: 5 5; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif; }
+    </style>
+</head>
+<body>
+    <table>
+        {% for list in postlist %}
+            <div id="post">
+                <p id="postname">{{list.postname}}</p>
+                <hr>
+                <p id="contents">{{list.contents}}</p>
+            </div>
+        {% endfor %}
+    </table>
+</body>
+</html>
